@@ -16,8 +16,16 @@
 
         <br><br>
 
-        <h3 id="titulo">↷Informe um número em decimal:</h3>
-        <input id="demo1" type="text" placeholder="Digite o valor em decimal" id="input">
+        <h3 id="titulo">↷Informe um número:</h3>
+        <input id="demo1" type="text" placeholder="Digite o valor" id="input">
+
+        <h3 class="text">Escolha a base do número:</h3>
+        <select name="Base" id="select_base"> 
+            <option value="binario">binário</option>
+            <option value="octal">octal</option>
+            <option value="decimal">decimal</option>
+            <option value="hexadecimal">hexadecimal</option>
+        </select>
 
         <br><br>
 
@@ -43,14 +51,27 @@
         <br><br>
 
         <button onclick="converter()" id="button">Converter ᯓᡣ𐭩</button>
+        <br><br>
+        <button onclick="quiz()" id="button">Quiz!</button>
 
     </div>
 
 <script>
 
 function converter() {
+
+    console.log(parseInt("FFF", 16))
+
+    /* var base = inputBase.value;
+    var hex_input = parseInt(`${input}`, base);
+    hex_input.toString(8)
+
+    divMensagem.innerHTML = `${hex_input.toString(8)}`
+    divMensagem.innerHTML = `${hex_input}`
+    divMensagem.innerHTML = `${hex_input.toString(2)}`
     
     var decimal = Number (demo1.value);
+    */
 
 let octal = decimal.toString(8);
 
@@ -64,25 +85,4 @@ console.log (hexadecimal);
 console.log (binaria);
 
 document.getElementById("demo1").innerHTML = ` ${decimal}`;
-document.getElementById("demo2").innerHTML = ` ${octal}`;
-document.getElementById("demo3").innerHTML = ` ${hexadecimal}`;
-document.getElementById("demo4").innerHTML = ` ${binaria}`;
-}
-
-function aparecer_bin() {
-    demo4.style.display = 'block'
-}
-
-function aparecer_hexa() {
-    demo3.style.display = 'block'
-}
-
-function aparecer_octal() {
-    demo2.style.display = 'block'
-}
-
-</script>
-
-</body>
-
-</html>
+document.
